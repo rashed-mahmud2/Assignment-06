@@ -6,7 +6,7 @@ import { checkAuthentication } from "@/lib/auth";
 export async function PATCH(req, { params }) {
   try {
     await connectDB();
-    const { blogId } = await params;
+    const { blogId, commentId } = await params;
 
     let user;
     try {
@@ -20,7 +20,7 @@ export async function PATCH(req, { params }) {
     if (!blog)
       return NextResponse.json({ message: "Blog not found" }, { status: 404 });
 
-    const comment = blog.comments.id(params.commentId);
+    const comment = blog.comments.id(commentId);
     if (!comment)
       return NextResponse.json(
         { message: "Comment not found" },
@@ -49,7 +49,7 @@ export async function PATCH(req, { params }) {
 export async function DELETE(req, { params }) {
   try {
     await connectDB();
-    const { blogId } = await params;
+    const { blogId, commentId } = await params;
 
     let user;
     try {
@@ -62,7 +62,7 @@ export async function DELETE(req, { params }) {
     if (!blog)
       return NextResponse.json({ message: "Blog not found" }, { status: 404 });
 
-    const comment = blog.comments.id(params.commentId);
+    const comment = blog.comments.id(commentId);
     if (!comment)
       return NextResponse.json(
         { message: "Comment not found" },
