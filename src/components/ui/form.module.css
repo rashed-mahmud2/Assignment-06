@@ -1,0 +1,27 @@
+.formItem {
+  display: grid;
+  gap: 8px;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.labelError {
+  color: red;
+}
+
+.description {
+  font-size: 12px;
+  color: #666;
+}
+
+.message {
+  font-size: 12px;
+  color: red;
+}
+
+.controlError {
+  border-color: red !important;
+}

@@ -1,0 +1,22 @@
+
+.content{
+  display: flex;
+  gap: 50px;
+} 
+
+.hr {
+  margin-top: 4rem;
+  border: none;
+  height: 1px;
+  background-color: var(--softTextColor);
+}
+
+@media screen and (max-width: 1025px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .hr {
+    margin-top: 0;
+  }
+}

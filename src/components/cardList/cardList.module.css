@@ -1,0 +1,13 @@
+.container {
+  flex: 5;
+}
+
+.title {
+  margin-block: 50px;
+}
+
+.hrline {
+  border: none; 
+  height: 1px; 
+  background-color: var(--softTextColor);
+}

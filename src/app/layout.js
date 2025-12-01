@@ -1,14 +1,31 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Dancing_Script, Geist, Geist_Mono, Poppins } from "next/font/google";
 import "./globals.css";
+// import Navbar from "@/components/navbar/Navbar";
+// import Footer from "@/components/footer/Footer";
+import ThemeProvider from "@/provider/ThemeProvider";
+import { Open_Sans } from "next/font/google";
+import AppProviders from "@/provider/appProvider";
+import LayoutVisibilityWrapper from "@/provider/LayoutVisibilityWrapper";
+// import { Toaster } from "@/components/ui/Toaster";
+import ClientToaster from "@/components/ui/ClientToaster";
+import { AuthProvider } from "@/context/AuthContext";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const openSans = Open_Sans({
   subsets: ["latin"],
+  weight: ["300", "400", "600", "700"],
+  variable: "--font-open-sans",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const poppins = Poppins({
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-poppins",
+});
+
+const dancing = Dancing_Script({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-dancing",
 });
 
 export const metadata = {
@@ -18,9 +35,26 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+    <html lang="en" suppressHydrationWarning={true}>
+      <body
+        className={`${poppins.variable} ${dancing.variable} ${openSans.variable}`}
+      >
+        <AppProviders>
+          <AuthProvider>
+            <ThemeProvider>
+              <LayoutVisibilityWrapper>
+                <div className="container">
+                  <div className="wrapper">
+                    {/* <Navbar /> */}
+                    <div className="children">{children}</div>
+                    {/* <Footer /> */}
+                    <ClientToaster />
+                  </div>
+                </div>
+              </LayoutVisibilityWrapper>
+            </ThemeProvider>
+          </AuthProvider>
+        </AppProviders>
       </body>
     </html>
   );

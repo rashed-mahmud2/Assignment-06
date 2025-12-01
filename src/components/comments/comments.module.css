@@ -1,0 +1,163 @@
+.container {
+  margin-bottom: 2rem;
+}
+.title {
+  color: var(--softTextColor);
+  font-weight: 600;
+}
+
+.write {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.commentInput {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  border: 2px solid var(--softTextColor);
+  background-color: var(--bg);
+  border-radius: 0.5rem;
+  color: var(--softTextColor);
+}
+
+.commentBtn {
+  padding: 0.8rem 3rem;
+  font-size: 1.2rem;
+  border-radius: 0.5rem;
+  background-color: var(--textColor);
+  color: var(--bg);
+  border: none;
+  transition: 0.3s;
+  border: 2px solid var(--textColor);
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.comments {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.comment {
+  border: 1px solid var(--softBorderColor);
+  padding: 1rem;
+  border-radius: 1rem;
+  padding-bottom: 0;
+}
+
+.loginToComment {
+  padding: 0.5rem;
+  background-color: red;
+  color: white;
+  font-weight: 500;
+  border-radius: 0.5rem;
+}
+
+.user {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  color: var(--softTextColor);
+}
+
+.username {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.date {
+  font-size: 0.8rem;
+}
+
+.userImage {
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+
+.userImage .image {
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.description {
+  margin-bottom: -2rem;
+}
+
+.hr {
+  margin-top: 2rem;
+}
+
+/* Edit & Delete buttons container */
+.actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 5px;
+}
+
+/* Common button style */
+.actions button {
+  padding: 4px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s;
+}
+
+/* Edit button */
+.actions button:nth-child(1) {
+  background-color: #4caf50;
+  color: white;
+}
+
+.actions button:nth-child(1):hover {
+  background-color: #45a049;
+}
+
+/* Delete button */
+.actions button:nth-child(2) {
+  background-color: #f44336;
+  color: white;
+}
+
+.actions button:nth-child(2):hover {
+  background-color: #da190b;
+}
+
+/* Save button during editing */
+.actions input {
+  padding: 4px 8px;
+  font-size: 0.85rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.actions button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+@media screen and (max-width: 640px) {
+  .detail .username {
+    font-size: 1rem;
+  }
+
+  .comments .description {
+    font-size: 0.9rem;
+  }
+}

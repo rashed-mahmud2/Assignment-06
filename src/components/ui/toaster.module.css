@@ -1,0 +1,18 @@
+.toaster {
+  /* You can style the toast container here */
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+}
+
+.spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

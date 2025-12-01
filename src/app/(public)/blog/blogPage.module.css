@@ -1,0 +1,44 @@
+.content {
+    display: flex;
+    gap: 50px;
+}
+
+.title {
+    background-color: green;
+    color: white;
+    text-align: center;
+    padding-block: 0.5rem;
+    border-radius: 2rem;
+    /* position: fixed;
+    z-index: 90; */
+    text-transform: capitalize;
+}
+
+.videoContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 2rem;
+}
+
+.video {
+    width: 100%;
+    height: auto;
+}
+
+
+.hr {
+  margin-top: 4rem;
+  border: none;
+  height: 1px;
+  background-color: var(--softTextColor);
+}
+
+@media screen and (max-width: 1025px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .hr {
+    margin-top: 0;
+  }
+}

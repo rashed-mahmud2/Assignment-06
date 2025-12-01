@@ -1,0 +1,32 @@
+.actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.likeBtn, .commentBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+  transition: 0.2s;
+  color: var(--textColor);
+}
+
+.likeBtn:hover, .commentBtn:hover {
+  background: var(--softBg);
+  box-shadow: 0 4px 8px var(--shadowColor);
+}
+
+.liked {
+  color: red;
+}
+.commentBtn {
+  color: var(--textColor);
+}
+

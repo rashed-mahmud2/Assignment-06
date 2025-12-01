@@ -1,0 +1,98 @@
+/* Base button styles */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  white-space: nowrap;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  outline: none;
+  cursor: pointer;
+}
+
+/* ------------------- VARIANTS ------------------- */
+
+.default {
+  background: var(--primary);
+  color: var(--primary-foreground);
+}
+
+.default:hover {
+  background: var(--primary-hover);
+}
+
+.destructive {
+  background: var(--destructive);
+  color: white;
+}
+
+.destructive:hover {
+  background: var(--destructive-hover);
+}
+
+.outline {
+  border: 1px solid var(--border);
+  background: var(--background);
+}
+
+.secondary {
+  background: var(--secondary);
+  color: var(--secondary-foreground);
+}
+
+.ghost {
+  background: transparent;
+}
+
+.ghost:hover {
+  background: var(--accent);
+}
+
+.link {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+/* ------------------- SIZES ------------------- */
+
+.default {
+  height: 36px;
+  padding: 8px 16px;
+}
+
+.sm {
+  height: 32px;
+  padding: 6px 12px;
+}
+
+.lg {
+  height: 40px;
+  padding: 10px 20px;
+}
+
+.icon {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+}
+
+.icon-sm {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+}
+
+.icon-lg {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+}
+
+/* Disabled */
+.button:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}

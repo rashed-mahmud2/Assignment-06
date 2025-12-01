@@ -1,0 +1,83 @@
+.container {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #f9fafb, #f3f4f6);
+}
+
+/* Hero */
+.heroSection {
+  background: linear-gradient(to right, #2563eb, #7c3aed);
+  color: white;
+  text-align: center;
+  padding: 6rem 1rem;
+}
+.heroTitle {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.heroText {
+  color: #eee;
+  font-size: 1.25rem;
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+}
+.heroButtons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.outlineButton {
+  border: 1px solid white !important;
+  color: white !important;
+}
+
+/* Stats */
+.statsSection {
+  background: var(--bg);
+  padding: 4rem 1rem;
+}
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+  text-align: center;
+}
+.statValue {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.statLabel {
+  color: #4b5563;
+}
+
+/* Features */
+.featuresSection {
+  padding: 4rem 1rem;
+  background: var(--softBg);
+}
+.sectionTitle {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 3rem;
+}
+.tabsList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+.featureTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.icon {
+  width: 20px;
+  height: 20px;
+  color: #2563eb;
+}
