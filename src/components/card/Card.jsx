@@ -22,7 +22,7 @@ const Card = async ({ blogId }) => {
           src={blog.image || "/p1.jpeg"}
           alt={blog.title || "Blog Image"}
           fill
-          sizes="(max-width: 768px) 100vw, 50vw"
+          sizes="100%"
           className={styles.image}
         />
       </div>
